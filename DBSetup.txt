@@ -1,0 +1,12 @@
+create database car_rental;
+use car_rental;
+
+CREATE USER 'dev'@'localhost' IDENTIFIED BY 'dev';
+GRANT ALL ON car_rental.* TO 'dev'@'localhost';
+
+CREATE TABLE borrowed_date (start_date VARCHAR(30), end_date VARCHAR(80), car_id INT);
+create table car (name VARCHAR(30), description VARCHAR(80), price double);
+
+INSERT INTO car (name, description, price) VALUES ('Audi Q7', 'Luxury', 150),('Audi A4', 'Luxury', 79.99),('Ford Mustang', 'Luxury', 200),('Chevrolet Camaro', 'Luxury', 220),('Porsche Boxster', 'Luxury', 199.99),('BMW M3', 'Luxury', 140),('Lamborghini Huracan', 'Luxury', 260),('Ferrari California', 'Luxury', 280);
+INSERT INTO borrowed_date(start_date, end_date, car_id) VALUES('1000-01-01 00:00:01', '1001-01-01 00:00:01', 1),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 2),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 3),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 4),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 5),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 6),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 7),('1000-01-01 00:00:01', '1001-01-01 00:00:01', 8);
+
